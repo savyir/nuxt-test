@@ -13,8 +13,8 @@
     data() {
       return {
         main: {
-          fields,
-          ...config
+          ...config,
+          fields
         }
       }
     }
