@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-main>
-      <alert />
-      <access-alert />
+      <alert/>
+      <access-alert/>
       <nuxt/>
-      <snackbar />
-      <loader />
+      <snackbar/>
+      <loader/>
     </v-main>
   </v-app>
 </template>
@@ -32,7 +32,6 @@
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Vuetify.js'
       }
     }
   }

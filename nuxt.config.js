@@ -40,13 +40,24 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'modules/vsd/src/index',
-    //'vuetify-strapi-dashboard',
+    ['modules/vsd/src/index', {
+      apiHelper: require('./modules/crypto/api').default,
+      validations: require('./modules/crypto/validations').default,
+      config: require('./modules/crypto/config').default,
+      settings: require('./modules/crypto/settings').default,
+      menu: require('./modules/crypto/menu').default
+    }]
+    // 'vuetify-strapi-dashboard',
     // 'vsd',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+
+  axios: {
+    changeOrigin: true,
+    baseURL: 'http://api-vsd.savy.ir',
+    debug: false
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -54,6 +65,7 @@ export default {
       themes: {}
     }
   },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

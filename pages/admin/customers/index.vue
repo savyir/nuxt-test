@@ -10,6 +10,7 @@
   import config from "./config";
 
   export default {
+    layout: 'admin',
     data() {
       return {
         main: {
