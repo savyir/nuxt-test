@@ -6,7 +6,7 @@
     layout: 'vsdAuth',
     head() {
       return {
-        title: 'ورود به پنل مدیریت'
+        title: 'Login Page'
       }
     },
   }

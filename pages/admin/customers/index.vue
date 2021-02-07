@@ -1,7 +1,6 @@
 <template>
   <div>
-    list:
-    <list-page :value="main"/>
+    <list-page :value="main" />
   </div>
 </template>
 <script>
@@ -11,6 +10,8 @@
 
   export default {
     layout: 'admin',
+    created() {
+    },
     data() {
       return {
         main: {

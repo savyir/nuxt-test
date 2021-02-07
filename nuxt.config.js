@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 import webpack from 'webpack'
+import _ from 'lodash'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -41,15 +42,21 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['modules/vsd/src/index', {
+      // rtl: true,
       apiHelper: require('./modules/crypto/api').default,
       validations: require('./modules/crypto/validations').default,
       config: require('./modules/crypto/config').default,
       settings: require('./modules/crypto/settings').default,
       menu: require('./modules/crypto/menu').default
     }]
-    // 'vuetify-strapi-dashboard',
-    // 'vsd',
   ],
+  i18n: {
+    locales: [
+      {code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr'},
+      {code: 'fa', iso: 'fa-IR', file: 'fa.js', dir: 'rtl'}
+    ],
+    defaultLocale: 'en',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
 
@@ -57,6 +64,27 @@ export default {
     changeOrigin: true,
     baseURL: 'http://api-vsd.savy.ir',
     debug: false
+  },
+  auth: {
+    strategies: {
+      admin: {
+        _scheme: 'local',
+        endpoints: {
+          login: {url: _.get(process, 'env.LOGIN_URL', '/auth/local'), method: 'post', propertyName: 'jwt'},
+          logout: {url: '/auth/logout', method: 'post'},
+          user: {url: '/users/me', method: 'get'}
+        },
+        tokenRequired: true,
+        tokenType: 'bearer',
+        autoFetchUser: true
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/logout',
+      callback: '/login',
+      home: '/'
+    }
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

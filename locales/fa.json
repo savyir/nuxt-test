@@ -1,0 +1,4 @@
+export default {
+  "showOnPop": "مشاهده جزئیات در پاپ آپ",
+  "searchInFilters": "فیلتر و جست و جو"
+}
