@@ -4,6 +4,7 @@ import _ from 'lodash'
 
 let vsdPath = process.env.PORT == 9200 ? 'vuetify-strapi-dashboard' : 'modules/vsd/src/index';
 let vspPath = process.env.PORT == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/src/index';
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -141,7 +142,13 @@ export default {
   vuetify: {
     rtl: false,
     theme: {
-      themes: {}
-    }
+      themes: {
+        light: {
+          primary: colors.red.darken1, // #E53935
+          secondary: colors.red.lighten4, // #FFCDD2
+          accent: colors.indigo.base, // #3F51B5
+        },
+      },
+    },
   },
 }
