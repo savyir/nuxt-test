@@ -1,0 +1,81 @@
+/*
+IRAN Sans-serif fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (8AC87U)
+--------------------------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family: 'yekan';
+  src: url(/assets/fonts/Yekan-modified.eot);
+  src: url(/assets/fonts/Yekan-modified.eot) format('embedded-opentype'),
+  url(/assets/fonts/Yekan-modified.woff) format('woff'),
+  url(/assets/fonts/Yekan-modified.ttf) format('truetype'),
+  url(/assets/fonts/Yekan-modified.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url(/assets/fonts/Vazir.eot);
+  src: url(/assets/fonts/Vazir.eot) format('embedded-opentype'),
+  url(/assets/fonts/Vazir.woff) format('woff'),
+  url(/assets/fonts/Vazir.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url(/assets/fonts/IRANSans.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-yekan {
+  font-family: yekan, "Roboto", sans-serif;
+}
+
+.font-vazir {
+  font-family: Vazir, "Roboto", sans-serif !important;
+}
+
+.font-iransans {
+  font-family: IRANSans, "Roboto", sans-serif !important;
+}
+
+a, p, div, span, button, input, h1, h2, h3, h4, h5, h6 {
+  font-family: IRANSans, Vazir, yekan, "Roboto", sans-serif;
+}
+
+.farsi, .farsi * {
+  direction: rtl;
+  text-align: right;
+  font-family: IRANSans, "Roboto", sans-serif;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.rtl {
+  direction: rtl !important;
+}
+
+.ltr {
+  direction: ltr !important;
+}
+

@@ -12,7 +12,7 @@ export default {
   FOOTER_LINKS: MENU.FOOTER_LINKS,
   PANEL_DRAWER: MENU.PANEL_DRAWER,
   PANEL_TOP_MENU: MENU.PANEL_TOP_MENU,
-  DEFAULT_PHOTO: '/dummy/avatar.png',
+  // DEFAULT_PHOTO: '/dummy/avatar.png',
   SETTINGS_ITEMS: SETTINGS,
   API_URL: process.env.API_URL,
 }

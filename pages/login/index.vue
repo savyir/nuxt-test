@@ -1,5 +1,7 @@
 <template>
-  <vsdLogin />
+  <div>
+    <vsd-login />
+  </div>
 </template>
 <script>
   export default {

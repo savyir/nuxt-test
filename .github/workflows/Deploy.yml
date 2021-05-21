@@ -13,4 +13,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd /home/vsd/front && git pull origin master && pm2 stop vsdFront && yarn && pm2 restart vsdFront
+        script: cd /home/savyjs/demo && git pull origin master && pm2 stop savyjsDemo && yarn && pm2 restart savyjsDemo

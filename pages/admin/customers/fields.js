@@ -1,6 +1,6 @@
 export default [
   {
-    text: 'identifer',
+    text: 'identifier',
     value: 'id',
     type: 'text',
     header: true, // show on table

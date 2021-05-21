@@ -21,7 +21,9 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    '~/static/assets/font.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -36,33 +38,79 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    ['nuxt-i18n',
+      {
+        vueI18nLoader: true,
+        locales: [
+          {code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr'},
+          {code: 'fa', iso: 'fa-IR', file: 'fa.js', dir: 'rtl'}
+        ],
+        rtl: false,
+        lazy: true,
+        langDir: "locale/",
+        defaultLocale: 'en'
+      }
+    ],
+    '@nuxt/content',
+    ['modules/vsp/src/index', {
+      i18n: true,
+      shop: {
+        cart: '/shop/cart',
+        categories: '/shop/category',
+        products: '/shop/products',
+        cartUrl: '/carts',
+        categoriesUrl: '/categories',
+        productsUrl: 'http://localhost:1337/products',
+        invoicesUrl: '/invoices',
+      },
+      blog: {
+        home: '/blog',
+        contents: '/blog',
+        tags: '/blog/tags',
+        logo: '/v.png',
+        title: 'Blog Title',
+        menu: [
+          {
+            text: 'Savy',
+            link: '/blog/author/savy',
+          }
+        ],
+      }
+    }],
     ['modules/vsd/src/index', {
-      // rtl: true,
-      apiHelper: require('./modules/crypto/api').default,
+      socket: false,
+      rtl: true,
+      i18n: true,
+      // locale: 'fa-ir',
+      crm: {
+        logo: '/crm/basic-panel.png',
+        home: '/crm',
+        support: '/crm/ticket/new',
+        menu: require('./modules/crm/menu').default
+      },
+      builder: {
+        form: '/forms',
+        group: '/groups',
+        element: '/elements',
+        record: '/records',
+      },
+      apiListHelper: require('./modules/crypto/api').default,
+      apiShowHelper: require('./modules/crypto/apiShowPage').default,
+      apiFormHelper: require('./modules/crypto/apiFormPage').default,
       validations: require('./modules/crypto/validations').default,
       config: require('./modules/crypto/config').default,
       settings: require('./modules/crypto/settings').default,
       menu: require('./modules/crypto/menu').default
     }]
   ],
-  i18n: {
-    locales: [
-      {code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr'},
-      {code: 'fa', iso: 'fa-IR', file: 'fa.js', dir: 'rtl'}
-    ],
-    defaultLocale: 'en',
-  },
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-
   axios: {
     changeOrigin: true,
-    baseURL: 'http://api-vsd.savy.ir',
+    baseURL: process.env.API_URL,
     debug: false
   },
   auth: {
@@ -83,24 +131,15 @@ export default {
       login: '/login',
       logout: '/logout',
       callback: '/login',
-      home: '/'
+      home: '/admin'
     }
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    rtl: false,
     theme: {
       themes: {}
     }
   },
-
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        _: 'lodash'
-      })
-    ]
-  }
 }

@@ -6,16 +6,21 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "postinstall": "node postinstall.js"
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.13.0",
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
-    "nuxt-i18n": "^6.20.0",
+    "nuxt-i18n": "^6.20.6",
     "nuxt-sweetalert2": "^1.0.0",
-    "vuetify-strapi-dashboard": "^1.1.52"
+    "socket.io-client": "^4.0.0",
+    "strapi-sdk-javascript": "^0.3.3",
+    "vuetify-strapi-dashboard": "^1.2.51",
+    "vuetify-strapi-page": "^0.1.56",
+    "@nuxtjs/storybook": "^3.3.1"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3",
