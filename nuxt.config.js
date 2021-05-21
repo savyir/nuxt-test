@@ -2,6 +2,8 @@ import colors from 'vuetify/es5/util/colors'
 import webpack from 'webpack'
 import _ from 'lodash'
 
+let vsdPath = process.env.proccess == 9200 ? 'vuetify-strapi-dashboard' : 'modules/vsd/src/index';
+let vspPath = process.env.proccess == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/src/index';
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -56,7 +58,7 @@ export default {
       }
     ],
     '@nuxt/content',
-    ['modules/vsp/src/index', {
+    [vspPath, {
       i18n: true,
       shop: {
         cart: '/shop/cart',
@@ -81,7 +83,7 @@ export default {
         ],
       }
     }],
-    ['modules/vsd/src/index', {
+    [vsdPath, {
       socket: false,
       rtl: true,
       i18n: true,
