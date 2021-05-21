@@ -2,8 +2,8 @@ import colors from 'vuetify/es5/util/colors'
 import webpack from 'webpack'
 import _ from 'lodash'
 
-let vsdPath = process.env.proccess == 9200 ? 'vuetify-strapi-dashboard' : 'modules/vsd/src/index';
-let vspPath = process.env.proccess == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/src/index';
+let vsdPath = process.env.PORT == 9200 ? 'vuetify-strapi-dashboard' : 'modules/vsd/src/index';
+let vspPath = process.env.PORT == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/src/index';
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
