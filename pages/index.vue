@@ -14,23 +14,29 @@
       img: 'https://vsd.savyjs.com/banner.png',
       bookmark: false,
       rows: [
+        {icon: "flag", title: 'Dashboard and CRM'},
+        {icon: "star", title: 'CRUD'},
+        {icon: "check", title: 'from generator'},
+        {icon: "money", title: 'auth and role system'},
+      ],
+      tags: [
+        {icon: "money", title: 'strapi'},
         {icon: "flag", title: 'i18n'},
         {icon: "star", title: 'axios'},
         {icon: "check", title: 'auth'},
-        {icon: "money", title: 'strapi'},
       ],
       price: 'free',
       to: '/vsd'
     },
     {
-      title: 'vuetify strapi page',
+      title: 'Vuetify Strapi Page',
       subTitle: 'open-source nuxt module',
       img: 'https://vsp.savyjs.com/banner.png',
       bookmark: false,
       rows: [
-        {icon: "flag", title: 'i18n'},
-        {icon: "star", title: 'axios'},
-        {icon: "check", title: 'auth'},
+        {icon: "flag", title: 'landing pages'},
+        {icon: "star", title: 'login and register pages'},
+        {icon: "check", title: 'e-commerce'},
         {icon: "money", title: 'strapi'},
       ],
       tags: [
@@ -43,19 +49,24 @@
       to: '/vsp'
     },
     {
-      title: '',
-      subTitle: 'تنها ۲۴ ساعت باقی مانده!',
+      title: 'Public Relation Panel',
+      subTitle: 'share your content in telegram, twitter, youtube, site, ... with one click',
       img: '/landing/img/hotels/slider/thumbs/img (3).jpg',
+      price: 25,
+      unit: '$',
       stars: 5,
-      tags: [
-        {icon: "flag", title: 'عنوان اول', value: 'مقدار اول'},
-        {icon: "star", title: 'عنوان دوم', value: 'مقدار دوم'},
-        {icon: "check", title: 'عنوان سوم', value: 'مقدار سوم'},
-        {icon: "money", title: 'عنوان چهارم', value: 'مقدار چهارم'},
+      rows: [
+        {icon: "flag", title: 'twitter'},
+        {icon: "star", title: 'telegram'},
+        {icon: "check", title: 'youtube'},
+        {icon: "check", title: 'blog'},
       ],
-      price: 150000,
-      id: 45,
-      to: '#savy'
+      tags: [
+        {icon: "flag", title: 'nuxt', value: 'مقدار اول'},
+        {icon: "star", title: 'strapi', value: 'مقدار دوم'},
+        {icon: "check", title: 'laravel', value: 'مقدار سوم'},
+      ],
+      to: 'PR tool'
     },
   ];
   export default {
