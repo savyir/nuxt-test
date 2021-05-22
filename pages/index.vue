@@ -51,7 +51,7 @@
     {
       title: 'Public Relation Panel',
       subTitle: 'share your content in telegram, twitter, youtube, site, ... with one click',
-      img: '/landing/img/hotels/slider/thumbs/img (3).jpg',
+      img: '/pr.png',
       price: 25,
       unit: '$',
       stars: 5,

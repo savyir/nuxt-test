@@ -37,8 +37,7 @@ export default {
   components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+  buildModules: [],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/vuetify',
@@ -57,7 +56,7 @@ export default {
         defaultLocale: 'en'
       }
     ],
-    '@nuxt/content',
+//    '@nuxt/content',
     [vspPath, {
       i18n: true,
       shop: {
