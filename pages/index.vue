@@ -10,36 +10,44 @@
   const items = [
     {
       title: 'Vuetify Strapi Dashboard',
-      subTitle: 'open-source kit',
+      subTitle: 'open-source nuxt module',
       img: 'https://vsd.savyjs.com/banner.png',
-      stars: 5,
-      fields: [
-        {icon: "money", title: 'عنوان چهارم', value: 'مقدار چهارم'},
+      bookmark: false,
+      rows: [
+        {icon: "flag", title: 'i18n'},
+        {icon: "star", title: 'axios'},
+        {icon: "check", title: 'auth'},
+        {icon: "money", title: 'strapi'},
       ],
       price: 'free',
       to: '/vsd'
     },
     {
-      title: 'تور ویژه کیش',
-      subTitle: 'تنها ۲۴ ساعت باقی مانده!',
-      img: '/landing/img/hotels/slider/thumbs/img (2).jpg',
-      stars: 5,
-      fields: [
-        {icon: "flag", title: 'عنوان اول', value: 'مقدار اول'},
-        {icon: "star", title: 'عنوان دوم', value: 'مقدار دوم'},
-        {icon: "check", title: 'عنوان سوم', value: 'مقدار سوم'},
-        {icon: "money", title: 'عنوان چهارم', value: 'مقدار چهارم'},
+      title: 'vuetify strapi page',
+      subTitle: 'open-source nuxt module',
+      img: 'https://vsp.savyjs.com/banner.png',
+      bookmark: false,
+      rows: [
+        {icon: "flag", title: 'i18n'},
+        {icon: "star", title: 'axios'},
+        {icon: "check", title: 'auth'},
+        {icon: "money", title: 'strapi'},
       ],
-      price: 150000,
-      id: 45,
-      to: '#savy'
+      tags: [
+        {icon: "flag", title: 'i18n'},
+        {icon: "star", title: 'axios'},
+        {icon: "check", title: 'auth'},
+        {icon: "money", title: 'strapi'},
+      ],
+      price: 'free',
+      to: '/vsp'
     },
     {
-      title: 'تور ویژه لهستان',
+      title: '',
       subTitle: 'تنها ۲۴ ساعت باقی مانده!',
       img: '/landing/img/hotels/slider/thumbs/img (3).jpg',
       stars: 5,
-      fields: [
+      tags: [
         {icon: "flag", title: 'عنوان اول', value: 'مقدار اول'},
         {icon: "star", title: 'عنوان دوم', value: 'مقدار دوم'},
         {icon: "check", title: 'عنوان سوم', value: 'مقدار سوم'},
