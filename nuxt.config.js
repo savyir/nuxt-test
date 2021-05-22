@@ -38,11 +38,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/vuetify',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['nuxt-i18n',
@@ -140,40 +139,6 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    rtl: false,
-    theme: {
-      themes: {
-        light: {
-          primary: '#1976D2',
-          secondary: '#424242',
-          accent: '#82B1FF',
-          error: '#FF5252',
-          info: '#2196F3',
-          success: '#4CAF50',
-          warning: '#FFC107',
-        }
-      },
-    },
+    rtl: false
   },
-  module: {
-    rules: [
-      {
-        test: /\.s(c|a)ss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            // Requires >= sass-loader@^8.0.0
-            options: {
-              implementation: require('sass'),
-              sassOptions: {
-                indentedSyntax: true // optional
-              },
-            },
-          },
-        ],
-      },
-    ],
-  }
 }
