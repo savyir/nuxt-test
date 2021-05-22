@@ -1,8 +1,7 @@
 <template>
-  <v-container class="text-center grey" style="margin-top: -80px;">
-    <v-card rounded light class="pa-5">
+  <v-container style="margin-top: -80px;">
+    <v-card rounded class="pa-5">
       <vsp-reserve-item-list :items="items"/>
-
     </v-card>
   </v-container>
 </template>
@@ -13,6 +12,9 @@
       subTitle: 'open-source nuxt module',
       img: '/vsd.png',
       bookmark: false,
+      tagImages:[
+        "https://badge.fury.io/js/vuetify-strapi-dashboard.png"
+      ],
       rows: [
         {icon: "flag", title: 'Dashboard and CRM'},
         {icon: "star", title: 'CRUD'},
@@ -33,6 +35,9 @@
       subTitle: 'open-source nuxt module',
       img: '/vsp.png',
       bookmark: false,
+      tagImages:[
+        "https://badge.fury.io/js/vuetify-strapi-page.png"
+      ],
       rows: [
         {icon: "flag", title: 'landing pages'},
         {icon: "star", title: 'login and register pages'},
@@ -50,9 +55,10 @@
     },
     {
       title: 'Public Relation Panel',
-      subTitle: 'share your content in telegram, twitter, youtube, site, ... with one click',
-      img: '/pr.png',
+      subTitle: 'share and track contents in telegram, twitter, youtube etc.',
+      img: '/pr-2.png',
       price: 25,
+      discount: 2,
       unit: '$',
       stars: 5,
       rows: [

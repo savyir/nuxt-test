@@ -8,8 +8,8 @@ let vspPath = process.env.PORT == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/sr
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - nuxt-test',
-    title: 'nuxt-test',
+    titleTemplate: '%s - vuetify and strapi kits .:. savyjs',
+    title: 'Home',
     htmlAttrs: {
       lang: 'en'
     },
@@ -30,17 +30,18 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/vuetify'
+   // '~/plugins/vuetify'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/vuetify',
+  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/vuetify',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     ['nuxt-i18n',
@@ -56,7 +57,7 @@ export default {
         defaultLocale: 'en'
       }
     ],
-//    '@nuxt/content',
+    '@nuxt/content',
     [vspPath, {
       i18n: true,
       shop: {
@@ -134,10 +135,5 @@ export default {
       callback: '/login',
       home: '/admin'
     }
-  },
-
-  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-  vuetify: {
-    rtl: false
   },
 }
