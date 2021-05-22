@@ -11,7 +11,7 @@
     {
       title: 'Vuetify Strapi Dashboard',
       subTitle: 'open-source nuxt module',
-      img: 'https://vsd.savyjs.com/banner.png',
+      img: '/vsd.png',
       bookmark: false,
       rows: [
         {icon: "flag", title: 'Dashboard and CRM'},
@@ -31,7 +31,7 @@
     {
       title: 'Vuetify Strapi Page',
       subTitle: 'open-source nuxt module',
-      img: 'https://vsp.savyjs.com/banner.png',
+      img: '/vsp.png',
       bookmark: false,
       rows: [
         {icon: "flag", title: 'landing pages'},
