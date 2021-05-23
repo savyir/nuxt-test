@@ -18,8 +18,8 @@
     "nuxt-sweetalert2": "^1.0.0",
     "socket.io-client": "^4.0.0",
     "strapi-sdk-javascript": "^0.3.3",
-    "vuetify-strapi-dashboard": "^1.2.51",
-    "vuetify-strapi-page": "^0.1.56",
+    "vuetify-strapi-dashboard": "^1.2.54",
+    "vuetify-strapi-page": "^0.1.57",
     "@nuxtjs/storybook": "^3.3.1"
   },
   "devDependencies": {
