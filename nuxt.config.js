@@ -8,7 +8,7 @@ let vspPath = process.env.PORT == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/sr
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - vuetify and strapi kits .:. savyjs',
+    titleTemplate: '%s - Savy JS, Vuetify and Strapi tools for developers and start-ups',
     title: 'Home',
     htmlAttrs: {
       lang: 'en'
