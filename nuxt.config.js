@@ -4,6 +4,7 @@ import _ from 'lodash'
 
 let vsdPath = process.env.PORT == 9200 ? 'vuetify-strapi-dashboard' : 'modules/vsd/src/index';
 let vspPath = process.env.PORT == 9200 ? 'vuetify-strapi-page' : 'modules/vsp/src/index';
+let hasNoIndex = process.env.PORT == 9200;
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -15,6 +16,7 @@ export default {
     },
     meta: [
       {charset: 'utf-8'},
+      hasNoIndex ? {name: 'robots', content: 'noindex'} : {},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: ''}
     ],
@@ -30,7 +32,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-   // '~/plugins/vuetify'
+    // '~/plugins/vuetify'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
