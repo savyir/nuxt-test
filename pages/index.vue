@@ -149,8 +149,11 @@
     },
   ];
   const social = [
+    {color: 'blue darken-1', icon: 'fa fa-linkedin', link: 'https://www.linkedin.com/in/ehsan-afshari-1192b6128/'},
     {color: 'grey', icon: 'fa fa-github', link: 'https://github.com/savyjs'},
+    {color: 'light-green accent-4', icon: 'fa fa-whatsapp', link: 'https://wa.link/hne34w'},
     {color: 'cyan', icon: 'fa fa-twitter', link: 'https://twitter.com/savy_versa'},
+    {color: 'orange', icon: 'fa fa-instagram', link: 'https://instagram.com/savy.versa'},
     {color: 'blue', icon: 'fa fa-telegram', link: 'https://t.me/savyversa'},
   ];
   export default {
