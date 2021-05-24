@@ -2,7 +2,22 @@
   <v-container style="margin-top: -80px;">
     <h1 class="green--text text--darken-4 font-13">Vuetify and Strapi Tools</h1>
     <v-card rounded class="pa-5">
+      <v-subheader>Tools</v-subheader>
       <vsp-reserve-item-list :items="items" sm="6" md="6" xl="6"/>
+    </v-card>
+    <v-card class="pa-5 my-5" rounded>
+      <v-subheader>About Me</v-subheader>
+      <vsp-about-me-spring
+        :rows="['Ehsan Afshari','Senior JS developer']"
+        :tags="['JS','Strapi','Nuxt','Vuetify','PHP','Laravel']"
+        :social="social"
+        img="/ehsan-afshari.jpg"
+      >
+        Hi! I am Ehsan, freelance Javascript developer who loves Vue and Strapi.
+        I create products using javascript and I am ready to build your smooth and powerful panel very fast.
+        just send me a message and tell me what you need.
+        my price is about 15$/hr and I promise it is more cheap to hire me than coding by your own.
+      </vsp-about-me-spring>
     </v-card>
   </v-container>
 </template>
@@ -14,7 +29,8 @@
       img: '/vsd.png',
       bookmark: false,
       tagImages: [
-        "https://badge.fury.io/js/vuetify-Strapi-dashboard.png"
+        "https://img.shields.io/npm/v/vuetify-strapi-dashboard?logo=npm",
+        "https://img.shields.io/npm/dt/vuetify-strapi-dashboard?color=green&label=install&logo=npm&style=flat"
       ],
       rows: [
         {icon: "check", title: 'dashboard and CRM'},
@@ -46,7 +62,8 @@
       img: '/vsp.png',
       bookmark: false,
       tagImages: [
-        "https://badge.fury.io/js/vuetify-Strapi-page.png"
+        "https://img.shields.io/npm/v/vuetify-strapi-page?logo=npm",
+        "https://img.shields.io/npm/dt/vuetify-strapi-page?color=green&label=install&logo=npm&style=flat"
       ],
       rows: [
         {icon: "check", title: 'multiple landing pages'},
@@ -131,10 +148,16 @@
       to: 'twitter-manage-followers-javascript-cms'
     },
   ];
+  const social = [
+    {color: 'grey', icon: 'fa fa-github', link: 'https://github.com/savyjs'},
+    {color: 'cyan', icon: 'fa fa-twitter', link: 'https://twitter.com/savy_versa'},
+    {color: 'blue', icon: 'fa fa-telegram', link: 'https://t.me/savyversa'},
+  ];
   export default {
     layout: 'vspSpring',
     data() {
       return {
+        social,
         items,
       }
     },
