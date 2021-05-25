@@ -28,17 +28,14 @@
       >
       </vsp-contact-section-spring>
     </v-card>
-
-    <v-subheader>Post</v-subheader>
+    <v-subheader>Last Post</v-subheader>
     <vsp-blog-latest-articles
       :articles="articles"
       :tags="tags"
     />
-
   </v-container>
 </template>
 <script>
-
   const items = [
     {
       title: 'Vuetify Strapi Dashboard',
@@ -198,12 +195,14 @@
         .sortBy('createdAt', 'desc')
         .fetch()
         .catch(err => {
+          console.error({err})
         })
       const tags = await $content('tags')
         .only(['name', 'description', 'img', 'slug'])
         .sortBy('createdAt', 'asc')
         .fetch()
         .catch(err => {
+          console.error({err})
         })
       return {articles, tags}
     },

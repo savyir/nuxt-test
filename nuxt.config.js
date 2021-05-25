@@ -83,10 +83,14 @@ export default {
         home: '/blog',
         contents: '/blog',
         tags: '/blog/tags',
-        logo: '/v.png',
-        title: 'Blog Title',
+        logo: '/logo-v.png',
+        title: null,
+        subtitle: 'build better businesses',
         menu: [
           {
+            text: 'Home',
+            link: '/',
+          }, {
             text: 'Savy',
             link: '/blog/author/savy',
           }
