@@ -30,6 +30,14 @@ export default {
     '~/static/assets/font.css'
   ],
 
+  recaptcha: {
+    hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
+    // language: String, // Recaptcha language (v2)
+    siteKey: process.env.RECAPTCHA_SITE_KEY || '6Lc8oeoaAAAAAMvHCdDN6Ylxh5rGhNpuevBrIlR-',// Site key for requests
+    version: 3, // Version
+    // size: 'compact' // Size: 'compact', 'normal', 'invisible' (v2)
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // '~/plugins/vuetify'

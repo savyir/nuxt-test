@@ -1847,6 +1847,11 @@
   dependencies:
     http-proxy-middleware "^1.0.6"
 
+"@nuxtjs/recaptcha@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/recaptcha/-/recaptcha-1.0.4.tgz#a12e3faa619c82d3e003b59cb6307516c8416ec3"
+  integrity sha512-4K9cXaVGZrcXy3ys5OBL1/njkOxTpRjLDKLU/S6qatyISdGLv+tSFLSCJeEKTCO7UHC1fMCTb5UlOWajkQqPdw==
+
 "@nuxtjs/storybook@^3.3.1":
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/storybook/-/storybook-3.3.2.tgz#f407d6d813ec5983133a2e0dab6c4f6b83d77b2c"
@@ -5488,7 +5493,7 @@ debug@^3.0.0:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@~4.3.1:
+debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@~4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
@@ -9423,6 +9428,13 @@ nuxt-jsonld@^1.5.1:
   integrity sha512-W8M4bD9Iw+Vy9LqJylkSzAf5NEOCJhDxzUlVLpT8IDtkDs1Ahwu0goH1+L8Gi8FBeDOqpK90Yttj3gwAGLi54A==
   dependencies:
     schema-dts "^0.8.2"
+
+nuxt-seo@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/nuxt-seo/-/nuxt-seo-1.5.0.tgz#bd65d84830efd0a755d6e1c99765f5faa3d69a58"
+  integrity sha512-YIq0gSuSUpANuVn3dTCtAkq5ViJrCA1ht1/NosHQrUOtIw7T2wLPUfeW7I6gqYNsZi7FEf+CjTaH7LWfWaf5jg==
+  dependencies:
+    debug "^4.2.0"
 
 nuxt-socket-io@^1.1.14:
   version "1.1.18"
@@ -13611,10 +13623,10 @@ vuetify-loader@^1.6.0:
     file-loader "^6.2.0"
     loader-utils "^2.0.0"
 
-vuetify-strapi-dashboard@^1.2.51:
-  version "1.2.51"
-  resolved "https://registry.yarnpkg.com/vuetify-strapi-dashboard/-/vuetify-strapi-dashboard-1.2.51.tgz#acf3283627ab4600324d25576397155c80c1c096"
-  integrity sha512-GmEcD/AX7HCQOAqJAHyc7FCZuu1BU87njH20XnWxPStLZPJRXX6vumqRgCFQdqveiMb7gX+M8zgaFnJWYtQ9pQ==
+vuetify-strapi-dashboard@^1.2.55:
+  version "1.2.55"
+  resolved "https://registry.yarnpkg.com/vuetify-strapi-dashboard/-/vuetify-strapi-dashboard-1.2.55.tgz#3e2ffef3f7516333cc2ce6db0b9b2e5607f2fad3"
+  integrity sha512-NgFW8UaoXsVCUz0mRm4LsMg9aCEZGndFxJf/Oao4xVHL+Li15Cj5ida2hd/wsKfzA4ScfYwY60Kq2o7kbpZ0rg==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.2"
     "@fortawesome/fontawesome-svg-core" "^1.2.34"
@@ -13635,6 +13647,7 @@ vuetify-strapi-dashboard@^1.2.51:
     material-icons "^0.3.1"
     moment-jalaali "^0.9.2"
     nuxt-i18n "^6.20.6"
+    nuxt-seo "^1.5.0"
     nuxt-socket-io "^1.1.14"
     nuxt-sweetalert2 "^1.0.0"
     path "^0.12.7"
@@ -13644,10 +13657,10 @@ vuetify-strapi-dashboard@^1.2.51:
     vue-json-excel "^0.3.0"
     vue-wysiwyg "^1.7.2"
 
-vuetify-strapi-page@^0.1.56:
-  version "0.1.56"
-  resolved "https://registry.yarnpkg.com/vuetify-strapi-page/-/vuetify-strapi-page-0.1.56.tgz#fd5d24b8b6ce0108056a91cab400f1445805565d"
-  integrity sha512-PDdx+beO28wa1/whBCGzTecUufGaSvzIg9qqd4Lza3YqJ2D65OI9T8o2jUF8q8NK3AIawY/4orLDmxdXvZdmNQ==
+vuetify-strapi-page@^0.1.62:
+  version "0.1.62"
+  resolved "https://registry.yarnpkg.com/vuetify-strapi-page/-/vuetify-strapi-page-0.1.62.tgz#8aa8ee011a8c0f16ce8fd98fedc88e2cea71f96c"
+  integrity sha512-Yhc47mlCrxFKBesxW8r9DdU1ZFHGey0zr4vo/UbHwiR2MbFjJQ+Syi5hFoovJXnQxhIlt+0RYGGZS3VIjBf8Gw==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.2"
     "@fortawesome/fontawesome-svg-core" "^1.2.34"
@@ -13658,6 +13671,7 @@ vuetify-strapi-page@^0.1.56:
     "@nuxt/content" "^1.14.0"
     "@nuxtjs/auth" "^4.9.1"
     "@nuxtjs/axios" "^5.13.0"
+    "@nuxtjs/recaptcha" "^1.0.4"
     "@nuxtjs/storybook" "^3.3.1"
     "@nuxtjs/strapi" "^0.3.0"
     axios "^0.21.1"

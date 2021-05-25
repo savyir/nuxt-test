@@ -19,9 +19,26 @@
         my price is about 15$/hr and I promise it is more cheap to hire me than coding by your own.
       </vsp-about-me-spring>
     </v-card>
+    <v-card class="pa-5 my-5" rounded>
+      <vsp-contact-section-spring
+        title="Contact Form"
+        email="savvyversa@gmail.com"
+        :social="social"
+        api="/contact"
+      >
+      </vsp-contact-section-spring>
+    </v-card>
+
+    <v-subheader>Post</v-subheader>
+    <vsp-blog-latest-articles
+      :articles="articles"
+      :tags="tags"
+    />
+
   </v-container>
 </template>
 <script>
+
   const items = [
     {
       title: 'Vuetify Strapi Dashboard',
@@ -156,13 +173,39 @@
     {color: 'orange', icon: 'fa fa-instagram', link: 'https://instagram.com/savy.versa'},
     {color: 'blue', icon: 'fa fa-telegram', link: 'https://t.me/savyversa'},
   ];
+
+
   export default {
     layout: 'vspSpring',
     data() {
       return {
         social,
         items,
+        articles: undefined,
+        tags: undefined,
+        lastPosts: []
       }
+    },
+    async fetch({$axios}) {
+      this.lastPosts = await $axios.$get('https://dev.to/api/articles/me/published', {headers: {'api-key': 'e6aLGT1SVzZ86U7N4fM6V77G'}}).catch(err => {
+        console.error(1, {err});
+      });
+      console.log(2, this.lastPosts);
+    },
+    async asyncData({params, $content}) {
+      const articles = await $content('articles')
+        .only(['title', 'description', 'img', 'slug', 'author'])
+        .sortBy('createdAt', 'desc')
+        .fetch()
+        .catch(err => {
+        })
+      const tags = await $content('tags')
+        .only(['name', 'description', 'img', 'slug'])
+        .sortBy('createdAt', 'asc')
+        .fetch()
+        .catch(err => {
+        })
+      return {articles, tags}
     },
     computed: {
       heads() {
