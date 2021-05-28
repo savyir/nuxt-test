@@ -189,7 +189,23 @@
       });
       console.log(2, this.lastPosts);
     },
-    async asyncData({params, $content}) {
+    async asyncData({params, vsp, $content, $axios}) {
+      const items = await $axios.$get('/products').catch(e => {
+        console.error('e', {e});
+      }).then(res => {
+        console.log({res})
+        res.map((item) => {
+          console.log({item})
+          item = Object.assign(item, item.meta)
+          item.img = vsp.API_URL + item.image.url
+          item.to = '/tools/details/' + item.slug
+          item.price = item.price > 0 ? item.price : 'free (open-source)';
+          return item;
+        })
+        return res;
+      }).catch(err => {
+        console.error({err})
+      });
       const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author'])
         .sortBy('createdAt', 'desc')
@@ -204,7 +220,7 @@
         .catch(err => {
           console.error({err})
         })
-      return {articles, tags}
+      return {items, articles, tags}
     },
     computed: {
       heads() {

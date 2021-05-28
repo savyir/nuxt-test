@@ -54,6 +54,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxt/content',
     ['nuxt-i18n',
       {
         vueI18nLoader: true,
@@ -67,10 +68,18 @@ export default {
         defaultLocale: 'en'
       }
     ],
-    '@nuxt/content',
     [vspPath, {
       i18n: true,
       shop: {
+        cart: '/shop/cart',
+        categories: '/shop/category',
+        products: '/shop/products',
+        cartUrl: '/carts',
+        categoriesUrl: '/categories',
+        productsUrl: 'http://localhost:1337/products',
+        invoicesUrl: '/invoices',
+      },
+      reservation: {
         cart: '/shop/cart',
         categories: '/shop/category',
         products: '/shop/products',
