@@ -80,6 +80,25 @@ export default {
         invoicesUrl: '/invoices',
       },
       reservation: {
+        menu: [
+          {
+            text: 'Home',
+            icon: 'home',
+            link: '/',
+          }, {
+            text: 'Products',
+            icon: 'shopping_basket',
+            link: '/blog/author/savy',
+          }, {
+            text: 'Blog',
+            icon: 'description',
+            link: '/blog/author/savy',
+          }, {
+            text: 'Contact',
+            icon: 'phone',
+            link: '/pages/contacts',
+          }
+        ],
         cart: '/shop/cart',
         categories: '/shop/category',
         products: '/shop/products',
