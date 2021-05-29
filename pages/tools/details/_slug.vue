@@ -15,8 +15,8 @@
       }
     },
     async asyncData({$axios, $content, params, vsp}) {
+      let article, tags;
       try {
-        let article, tags;
         try {
           article = await $content('products', params.slug).fetch()
           const tagsList = await $content('tags')
@@ -25,32 +25,32 @@
             .fetch()
           tags = Object.assign({}, ...tagsList.map((s) => ({[s.name]: s})))
         } catch (e) {
-          console.error({e})
+          console.error('content',{e})
         }
 
         let url = `/products/?slug=${params.slug}`;
         let item = await $axios.$get(url).catch(err => {
-          console.error({err});
+          console.error('axios',{err});
         }).then(res => res[0]).then(async res => {
           Object.assign(res, res.meta)
           res.img = vsp.API_URL + res.image.url;
           try {
             if (_.get(res, 'installs', false)) res.downloads = await $axios.$get(res.installs).then(npm => npm.downloads || 1000);
           } catch (e) {
-            console.error({e})
+            console.error('npm',{e})
           }
           res.price = res.price > 0 ? res.price : 'free (open-source)';
           return res;
         })
 
-        console.log({item})
+        // console.log({item})
         return {
           item,
           article,
           tags
         };
       } catch (e) {
-        console.error({e})
+        console.error('async',{e})
       }
 
     },
@@ -67,13 +67,13 @@
             "ratingValue": "4.5",
             "reviewCount": _.get(this.item, 'downloads', 11)
           },
-          name: this.item.title,
+          name: _.get(this.item,'title',''),
           image: this.vsp.API_URL + _.get(this.item, 'image.url', ''),
           "description": _.get(this.item, 'subtitle', '') + ' - ' + _.get(this.item, 'description', this.article || ''),
           // review: {}
         };
       } catch (e) {
-        console.error({e})
+        console.error('jsonLD',{e})
       }
     },
     layout: 'vspReservationItem'
