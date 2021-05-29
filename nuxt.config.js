@@ -86,13 +86,13 @@ export default {
             icon: 'home',
             link: '/',
           }, {
-            text: 'Products',
+            text: 'Tools',
             icon: 'shopping_basket',
-            link: '/blog/author/savy',
+            link: '/tools',
           }, {
             text: 'Blog',
             icon: 'description',
-            link: '/blog/author/savy',
+            link: '/blog',
           }, {
             text: 'Contact',
             icon: 'phone',
