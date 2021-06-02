@@ -1,0 +1,487 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210602.165946.13084.0.001.json",
+    "dumpEventTime": "2021-06-02T16:59:46Z",
+    "dumpEventTimeStamp": "1622636986430",
+    "processId": 13084,
+    "cwd": "E:\\wamp64\\www\\nodejs\\nuxt-test",
+    "commandLine": [
+      "E:\\Program Files\\nodejs\\node.exe",
+      "E:/wamp64/www/nodejs/nuxt-test/node_modules/.bin/../nuxt/bin/nuxt.js"
+    ],
+    "nodejsVersion": "v12.13.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.13.0",
+      "v8": "7.7.299.13-node.12",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.0/node-v12.13.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.0/node-v12.13.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.13.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19042",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+        "speed": 2195,
+        "user": 17007953,
+        "nice": 0,
+        "sys": 11111156,
+        "idle": 245716828,
+        "irq": 1068812
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+        "speed": 2195,
+        "user": 15456843,
+        "nice": 0,
+        "sys": 7280578,
+        "idle": 251098312,
+        "irq": 328765
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+        "speed": 2195,
+        "user": 18059421,
+        "nice": 0,
+        "sys": 9494156,
+        "idle": 246282156,
+        "irq": 134484
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz",
+        "speed": 2195,
+        "user": 16350343,
+        "nice": 0,
+        "sys": 6731968,
+        "idle": 250753406,
+        "irq": 188937
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "gozarHoland",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::e0c5:129d:2442:3bee",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 49
+      },
+      {
+        "name": "gozarHoland",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "10.10.10.242",
+        "netmask": "255.255.255.255",
+        "family": "IPv4"
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "34:e6:ad:ef:f1:32",
+        "address": "2a01:5ec0:b001:fc94:94c3:bac9:f107:8276",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "34:e6:ad:ef:f1:32",
+        "address": "2a01:5ec0:b001:fc94:fdc7:1354:ef4e:c806",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "34:e6:ad:ef:f1:32",
+        "address": "fe80::94c3:bac9:f107:8276",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 13
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "34:e6:ad:ef:f1:32",
+        "address": "192.168.43.217",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Local Area Connection* 2",
+        "internal": false,
+        "mac": "36:e6:ad:ef:f1:32",
+        "address": "fe80::f56a:10b:5996:3c08",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      },
+      {
+        "name": "Local Area Connection* 2",
+        "internal": false,
+        "mac": "36:e6:ad:ef:f1:32",
+        "address": "192.168.137.1",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-FNKF87H"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff74b631389",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff74b6357cc",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28348"
+    },
+    {
+      "pc": "0x00007ff74b634778",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24168"
+    },
+    {
+      "pc": "0x00007ff74b72332b",
+      "symbol": "v8::base::CPU::has_sse+37723"
+    },
+    {
+      "pc": "0x00007ff74bf26f4e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff74bf0ef91",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff74bddc85c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff74bde7c00",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff74bde4734",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x00007ff74bdd9fc3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff74bdd8794",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff74bdf9a65",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff74bb66239",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+4057"
+    },
+    {
+      "pc": "0x00007ff74c352c6d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+567949"
+    },
+    {
+      "pc": "0x000002d6d3d4854c",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2155638784,
+    "totalCommittedMemory": 2155638784,
+    "usedMemory": 2119729928,
+    "availableMemory": 45980464,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 2621440,
+        "committedMemory": 2621440,
+        "capacity": 1309360,
+        "used": 485712,
+        "available": 823648
+      },
+      "old_space": {
+        "memorySize": 1643491328,
+        "committedMemory": 1643491328,
+        "capacity": 1629817528,
+        "used": 1628376160,
+        "available": 1441368
+      },
+      "code_space": {
+        "memorySize": 11698176,
+        "committedMemory": 11698176,
+        "capacity": 10564672,
+        "used": 10564672,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 34607104,
+        "committedMemory": 34607104,
+        "capacity": 17998800,
+        "used": 17998800,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 461180928,
+        "committedMemory": 461180928,
+        "capacity": 460625024,
+        "used": 460625024,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 1777664,
+        "committedMemory": 1777664,
+        "capacity": 1647264,
+        "used": 1647264,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1309360,
+        "used": 0,
+        "available": 1309360
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 852.265,
+    "kernelCpuSeconds": 53.484,
+    "cpuConsumptionPercent": 11.581,
+    "maxRss": 2325921792,
+    "pageFaults": {
+      "IORequired": 3379591,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 48820,
+      "writes": 9772
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "": "C:=C:\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "API_URL": "https://api-vsd.savyjs.com",
+    "APPDATA": "C:\\Users\\savvy\\AppData\\Roaming",
+    "APP_ENV": "development",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-FNKF87H",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "CRM_LOGO": "/crm/basic-panel.png",
+    "DataGrip": "e:\\Program Files\\JetBrains\\DataGrip 2020.1.4\\bin;",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOME": "C:\\Users\\savvy",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\savvy",
+    "IDEA_INITIAL_DIRECTORY": "e:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\bin",
+    "INIT_CWD": "E:\\wamp64\\www\\nodejs\\nuxt-test",
+    "JAVA_HOME": "E:\\Program Files\\Java\\jdk1.8.0_51",
+    "JRE_HOME": "E:\\Program Files\\Java\\jdk1.8.0_51\\jre",
+    "LOCALAPPDATA": "C:\\Users\\savvy\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-FNKF87H",
+    "MSYSTEM": "MINGW64",
+    "NODE": "e:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "development",
+    "NUMBER_OF_PROCESSORS": "4",
+    "NVM_HOME": "C:\\Users\\savvy\\AppData\\Roaming\\nvm",
+    "NVM_SYMLINK": "e:\\Program Files\\nodejs",
+    "OS": "Windows_NT",
+    "OneDrive": "C:\\Users\\savvy\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\savvy\\OneDrive",
+    "PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\savvy\\bin;C:\\Users\\savvy\\AppData\\Local\\Temp\\yarn--1622629164959-0.42001067805735626;E:\\wamp64\\www\\nodejs\\nuxt-test\\node_modules\\.bin;C:\\Users\\savvy\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Users\\savvy\\AppData\\Local\\Yarn\\bin;E:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;E:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;E:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;E:\\Program Files\\Git\\cmd;E:\\Program Files\\Git\\mingw64\\bin;E:\\Program Files\\Git\\usr\\bin;E:\\wamp64\\bin\\php\\php7.4.7;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\System32\\OpenSSH;%NVM_HOME%;%NVM_SYMLINK%;C:\\Program Files\\Redis;C:\\Users\\savvy\\.windows-build-tools\\python27;C:\\Users\\savvy\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\savvy\\AppData\\Roaming\\npm;E:\\Program Files\\JetBrains\\PhpStorm 2019.3\\bin;E:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\bin;C:\\Users\\savvy\\AppData\\Roaming\\Composer\\vendor\\bin;E:\\Program Files\\JetBrains\\DataGrip 2020.1.4\\bin;C:\\Users\\savvy\\AppData\\Roaming\\nvm;E:\\Program Files\\nodejs;C:\\Users\\savvy\\AppData\\Local\\gitkraken\\bin;%USERPROFILE%\\AppData\\Local\\Microsoft\\WindowsApps",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PORT": "3000",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 61 Stepping 4, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "3d04",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "E:/wamp64/www/nodejs/nuxt-test",
+    "PhpStorm": "e:\\Program Files\\JetBrains\\PhpStorm 2019.3\\bin;",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "RECAPTCHA_SITE_KEY": "6Lc8oeoaAAAAAMvHCdDN6Ylxh5rGhNpuevBrIlR-",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\savvy\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TITLE_TEMPLATE": "",
+    "TMP": "C:\\Users\\savvy\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-FNKF87H",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-FNKF87H",
+    "USERNAME": "savvy",
+    "USERPROFILE": "C:\\Users\\savvy",
+    "VUE_ENV": "server",
+    "WINDIR": "C:\\WINDOWS",
+    "WebStorm": "e:\\Program Files\\JetBrains\\WebStorm 2019.3.1\\bin;",
+    "YARN_WRAP_OUTPUT": "false",
+    "_": "E:/Program Files/nodejs/node",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"run\",\"dev\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_script_shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.22.10 npm/? node/v12.13.0 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Users\\savvy\\AppData\\Roaming\\npm\\node_modules\\yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "dev",
+    "npm_lifecycle_script": "nuxt",
+    "npm_node_execpath": "e:\\Program Files\\nodejs\\node.exe",
+    "npm_package_dependencies__nuxtjs_auth": "^4.9.1",
+    "npm_package_dependencies__nuxtjs_axios": "^5.13.0",
+    "npm_package_dependencies__nuxtjs_storybook": "^3.3.1",
+    "npm_package_dependencies_core_js": "^3.8.3",
+    "npm_package_dependencies_nuxt": "^2.14.12",
+    "npm_package_dependencies_nuxt_i18n": "^6.20.6",
+    "npm_package_dependencies_nuxt_sweetalert2": "^1.0.0",
+    "npm_package_dependencies_socket_io_client": "^4.0.0",
+    "npm_package_dependencies_strapi_sdk_javascript": "^0.3.3",
+    "npm_package_dependencies_vuetify_strapi_dashboard": "^1.2.55",
+    "npm_package_dependencies_vuetify_strapi_page": "^0.1.72",
+    "npm_package_description": "## Build Setup",
+    "npm_package_devDependencies__nuxtjs_vuetify": "^1.11.3",
+    "npm_package_devDependencies_fs": "^0.0.1-security",
+    "npm_package_devDependencies_path": "^0.12.7",
+    "npm_package_name": "nuxt-test",
+    "npm_package_private": "true",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_scripts_build": "nuxt build",
+    "npm_package_scripts_dev": "nuxt",
+    "npm_package_scripts_generate": "nuxt generate",
+    "npm_package_scripts_postinstall": "node postinstall.js",
+    "npm_package_scripts_start": "nuxt start",
+    "npm_package_version": "1.0.0",
+    "_applied": "true",
+    "_AXIOS_BASE_URL_": "https://api-vsd.savyjs.com",
+    "_HTTP_BASE_URL_": "https://api-vsd.savyjs.com"
+  },
+  "sharedObjects": [
+    "E:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll"
+  ]
+}

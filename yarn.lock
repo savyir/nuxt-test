@@ -13657,10 +13657,10 @@ vuetify-strapi-dashboard@^1.2.55:
     vue-json-excel "^0.3.0"
     vue-wysiwyg "^1.7.2"
 
-vuetify-strapi-page@^0.1.62:
-  version "0.1.62"
-  resolved "https://registry.yarnpkg.com/vuetify-strapi-page/-/vuetify-strapi-page-0.1.62.tgz#8aa8ee011a8c0f16ce8fd98fedc88e2cea71f96c"
-  integrity sha512-Yhc47mlCrxFKBesxW8r9DdU1ZFHGey0zr4vo/UbHwiR2MbFjJQ+Syi5hFoovJXnQxhIlt+0RYGGZS3VIjBf8Gw==
+vuetify-strapi-page@^0.1.72:
+  version "0.1.72"
+  resolved "https://registry.yarnpkg.com/vuetify-strapi-page/-/vuetify-strapi-page-0.1.72.tgz#bede6bef1611363e45d48a96e8001ccd65f615a2"
+  integrity sha512-UyGAUHJiXRlB/hJYzZrCk1CzQTcUo22F8yL4EwfdcSDOalmSLvNsjktJLs8SagYsT2i7ObacB81rIbw15Wtlcw==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.15.2"
     "@fortawesome/fontawesome-svg-core" "^1.2.34"

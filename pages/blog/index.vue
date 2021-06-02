@@ -8,7 +8,7 @@
   export default {
     layout: 'vspBlog',
     async asyncData({$content, params}) {
-      const articles = await $content('articles', params.slug)
+      const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author'])
         .sortBy('createdAt', 'desc')
         .limit(10)

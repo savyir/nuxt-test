@@ -41,7 +41,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // '~/plugins/vuetify'
-     '~/plugins/jsonld'
+    '~/plugins/jsonld'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -121,8 +121,8 @@ export default {
             text: 'Home',
             link: '/',
           }, {
-            text: 'Savy',
-            link: '/blog/author/savy',
+            text: 'Blog',
+            link: '/blog',
           }
         ],
       }
