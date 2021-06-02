@@ -1,6 +1,10 @@
 <template>
   <div>
-    <vsp-reserve-item-page :tags="tags" :article="article" :item="item"/>
+    <vsp-reserve-item-page
+      :tags="tags"
+      :article="article"
+      :item="item"
+    />
   </div>
 </template>
 <script>
@@ -43,7 +47,6 @@
           return res;
         })
 
-        // console.log({item})
         return {
           item,
           article,
@@ -56,28 +59,6 @@
     },
     created() {
       this._ = _;
-    },
-    async jsonld() {
-      try {
-        let jsnoLD = {
-          '@context': 'https://schema.org',
-          '@type': 'Product',
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "reviewCount": _.get(this.item, 'downloads', 11)
-          },
-          name: _.get(this.item, 'title', ''),
-          image: this.vsp.API_URL + _.get(this.item, 'image.url', ''),
-          "description": _.get(this.item, 'subtitle', '') + ' - ' + _.get(this.item, 'description', this.article || ''),
-          // review: {}
-        };
-        console.log({jsnoLD}, 'started JSONLD')
-
-        return jsnoLD;
-      } catch (e) {
-        console.error('jsonLD', {e})
-      }
     },
     layout: 'vspReservationItem'
   }
