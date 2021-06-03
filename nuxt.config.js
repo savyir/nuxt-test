@@ -70,6 +70,7 @@ export default {
       }
     ],
     [vspPath, {
+      baseUrl: process.env.BASE_URL,
       i18n: true,
       shop: {
         cart: '/shop/cart',
@@ -128,6 +129,7 @@ export default {
       }
     }],
     [vsdPath, {
+      baseUrl: process.env.BASE_URL,
       socket: false,
       rtl: true,
       i18n: true,
