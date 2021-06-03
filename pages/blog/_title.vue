@@ -1,6 +1,7 @@
 <template>
   <div>
-    <vsp-blog-show-content :article="article" :tags="tags" :next="next" :prev="prev"/>
+    <vsp-blog-show-content
+      :article="article" :tags="tags" :next="next" :prev="prev"/>
   </div>
 </template>
 <script>
