@@ -99,7 +99,7 @@ export default {
           }, {
             text: 'Contact',
             icon: 'phone',
-            link: '/pages/contacts',
+            link: '/pages/contact',
           }
         ],
         cart: '/shop/cart',
@@ -173,13 +173,24 @@ export default {
         tokenRequired: true,
         tokenType: 'bearer',
         autoFetchUser: true
-      }
+      },
+      user: {
+        _scheme: 'local',
+        endpoints: {
+          login: {url: _.get(process, 'env.LOGIN_URL', '/auth/local'), method: 'post', propertyName: 'jwt'},
+          logout: {url: '/auth/logout', method: 'post'},
+          user: {url: '/users/me', method: 'get'}
+        },
+        tokenRequired: true,
+        tokenType: 'bearer',
+        autoFetchUser: true,
+      },
     },
     redirect: {
       login: '/login',
       logout: '/logout',
       callback: '/login',
-      home: '/admin'
+      home: '/'
     }
   },
 }

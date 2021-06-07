@@ -3,6 +3,8 @@
 </template>
 <script>
   export default {
-    layout: 'vsdCrm'
+    layout: 'vsdCrm',
+    auth: 'user',
+    middleware: ['auth']
   }
 </script>
