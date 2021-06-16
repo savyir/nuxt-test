@@ -7,9 +7,10 @@
     <v-card class="pa-5 my-5" rounded>
       <v-subheader>About Me</v-subheader>
       <vsp-about-me-spring
-        :rows="['Ehsan Afshari','Senior JS developer']"
-        :tags="['JS','Strapi','Nuxt','Vuetify','PHP','Laravel']"
+        :rows="['Ehsan Afshari','Senior JS developer','Starting in 2010, PHP and Joomla',' Currently: Javascript (Strapi, Nuxtjs)']"
+        :tags="['Javascript','Strapi','Nuxt','Vuetify','PHP','Laravel']"
         :social="social"
+        :cta="social[0]"
         img="/ehsan-afshari.jpg"
       >
         Hi! I am Ehsan, freelance Javascript developer who loves Vue and Strapi.
@@ -23,7 +24,7 @@
         title="Contact Form"
         email="savvyversa@gmail.com"
         :social="social"
-        api="/contact"
+        api="/contacts"
       >
       </vsp-contact-section-spring>
     </v-card>

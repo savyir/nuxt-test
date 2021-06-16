@@ -1,6 +1,6 @@
 ---
 title: better SEO in nuxtjs - part 1,  using jsonld
-description: 
+description: strong point of the nuxt is SSR that makes nuxt an excellent option for front-end developers. in this article we want to introduce basic usage of google schema and using it in nuxt pgaes using 'nuxt-jsonld' package.
 img: https://images.unsplash.com/photo-1588065394015-68bf7e40738d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80
 alt: Article 10
 author: 
